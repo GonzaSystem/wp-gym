@@ -12,7 +12,9 @@
 	<div class="container header-grid">
 		<div class="site-navbar">
 			<div class="logo">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="logo">
+				<a href="<?php echo esc_url(site_url('/')); ?>">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="logo">
+				</a>
 			</div>
 
 			<!-- Navbar register -->

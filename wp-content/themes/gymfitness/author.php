@@ -6,7 +6,9 @@
 		<h2 class="text-center primary-text">Autor: <?php echo $author->data->display_name; ?></h2>
 		<p class="text-center"><?php echo get_the_author_meta( 'description', $author->data->ID ); ?></p>
 		<ul class="blog-list">
-			<?php get_template_part( 'template-parts/loop', 'blog' ); ?>
+			<?php while( have_posts() ) : the_post();
+				get_template_part( 'template-parts/loop', 'blog' );
+			endwhile; ?>
 		</ul>
 	</main>
 <?php get_footer(); ?>
